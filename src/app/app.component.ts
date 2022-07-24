@@ -5,4 +5,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  username = '';
+
+  resetUsernameToEmpty(){
+    this.username = '';
+  }
+
+  isUsernameEmpty(){
+    return null;
+  }
 }
