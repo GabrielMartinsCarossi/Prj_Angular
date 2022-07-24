@@ -11,9 +11,9 @@
         <button class="btn btn-primary" 
             (click)="onToggleDisplayDetails()">Display Details</button>
         <p *ngIf="displayDetails">Details: that is a detail!</p>
-        <div *ngFor="let log of logs"
-            [ngStyle]="{'background-color': log >= 5 ? 'blue' : 'default'}"
-            [ngClass]="{whiteText: log >= 5}"
+        <div *ngFor="let log of logs; let i = index"
+            [ngStyle]="{'background-color': i >= 5 ? 'blue' : 'default'}"
+            [ngClass]="{whiteText: i >= 5}"
         >{{ log }}</div>
       </div>
     </div>
